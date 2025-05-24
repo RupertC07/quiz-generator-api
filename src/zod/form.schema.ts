@@ -33,7 +33,7 @@ export const question_schema = z.object({
 export const form_schema = z.object({
     name: z.string().min(1, "Form name cannot be empty"),
     description: z.string().min(1, "Form description cannot be empty"),
-    questions: z.array(question_schema).min(15, "At least fifteen questions are required").max(50, "No more than fifty questions are allowed"),
+    questions: z.array(question_schema).min(50, "At least fifty questions are required").max(75, "No more than seventy-five questions are allowed"),
 });
 
 export const query_schema = z.object({

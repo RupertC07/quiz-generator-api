@@ -21,7 +21,7 @@ class FormService {
         *name: short, descriptive name of the quiz
         *description: what this quiz is all about about
         *questions:
-            - at least 15 questions, no more than 50
+            - at least 50 questions, no more than 75
             -each question should have:
             - question: the question text
             - type: The type of question, can be one of the following: true_false[True or False],
