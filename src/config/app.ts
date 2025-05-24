@@ -3,8 +3,9 @@ import bodyParser from "body-parser";
 import AppError from "../utils/AppError";
 import routes from "../routers";
 import morgan from "morgan";
-import swagger from "../utils/swagger";
+// import swagger from "../utils/swagger";
 import cors from "cors";
+import AppResponse from "../utils/AppResponse";
 const app = express();
 
 app.use(cors());
@@ -17,10 +18,16 @@ if (process.env.PROJECT_ENV === "development") {
 }
 
 app.use("/api/v1/", routes);
-swagger(app);
+// swagger(app);
 
 app.get("/", (req, res) => {
-  return res.redirect("/docs");
+  return AppResponse.sendSuccess({
+    res,
+    data: null,
+    message: "Welcome to the Quiz Form API",
+    code: 200,
+  });
+  ;
 });
 
 // Global Error Handler for all routes
