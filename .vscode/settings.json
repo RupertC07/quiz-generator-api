@@ -8,6 +8,9 @@
     "vs-code-prettier-eslint.prettierLast": false,
     "[typescript]": {
       "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
     } // set as "true" to run 'prettier' last not first
   }
   

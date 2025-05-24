@@ -70,7 +70,9 @@ class FormService {
         const responseText =
             typeof response === "string"
                 ? response
-                : response.text ?? response.content ?? JSON.stringify(response);
+                : typeof response.content === "string"
+                    ? response.content
+                    : JSON.stringify(response.content);
 
         return await parser.parse(responseText)
 
